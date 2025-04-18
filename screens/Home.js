@@ -19,7 +19,7 @@ export default function Home({ navigation }) {
         </Text>
       </View>
 
-      {/* Buttons */}
+      
       <View style={styles.section}>
         <Text style={styles.heading}>Explore Features</Text>
 
@@ -45,6 +45,7 @@ export default function Home({ navigation }) {
           <Text style={styles.buttonText}>Try Out</Text>
         </TouchableOpacity>
       </View>
+      
     </ScrollView>
   );
 }
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 30,
     padding: 15,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#1111",
     borderRadius: 10,
   },
   heading: {

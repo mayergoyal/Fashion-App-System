@@ -42,7 +42,7 @@ export default function FashionRec() {
     });
 
     try {
-      let response = await fetch("http://172.16.96.186:5000/upload", {
+      let response = await fetch("http://192.168.109.188:5000/upload", {
         method: "POST",
         body: formData,
         headers: {
@@ -72,13 +72,15 @@ export default function FashionRec() {
         <Text style={styles.buttonText}>Get Recommendations</Text>
       </TouchableOpacity>
 
-      {recommendations.length>0 && (
+      {recommendations.length > 0 && (
         <ScrollView contentContainerStyle={styles.recommendationsContainer}>
-           { recommendations.map((item,index)=>(
-            <Image key={index} source={{uri:item}} style={styles.recommededimg} />
-           ))
-
-           }
+          {recommendations.map((item, index) => (
+            <Image
+              key={index}
+              source={{ uri: item }}
+              style={styles.recommededimg}
+            />
+          ))}
         </ScrollView>
       )}
     </View>
@@ -107,9 +109,9 @@ const styles = StyleSheet.create({
     margin: 5,
     borderRadius: 10,
   },
-  recommendationsContainer:{
-    flexDirection:"row",
-    flexWrap:"wrap",
-    justifyContent:"center",
-  }
+  recommendationsContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  },
 });
