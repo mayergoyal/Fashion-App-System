@@ -1,0 +1,3 @@
+[submodule "minor2/dlib"]
+	path = minor2/dlib
+	url = https://github.com/davisking/dlib.git
